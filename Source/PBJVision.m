@@ -2108,6 +2108,12 @@ typedef void (^PBJVisionBlock)();
             videoDimensions.height = (int32_t)(dimensions.width * 9 / 16.0f);
             break;
         }
+        case PBJOutputFormatFullscreen:
+        {
+            videoDimensions.width = (int32_t)[UIScreen mainScreen].bounds.size.width;
+            videoDimensions.height = (int32_t)[UIScreen mainScreen].bounds.size.height;
+            break;
+        }
         case PBJOutputFormatStandard:
         {
             videoDimensions.width = dimensions.width;
